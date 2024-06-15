@@ -15,7 +15,7 @@ app.use(cors());
 app.get('/', (req, res) => {
     console.log(req);
     res.status(200).json({
-        message:`${process.env.PORT} : ${req.protocol}:  ${req.get('host') }:/`
+        message:`${process.env.PORT} :${process.env.NAME}: ${req.protocol}:  ${req.get('host') }:/`
     });
 });
 
