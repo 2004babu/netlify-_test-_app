@@ -13,8 +13,9 @@ app.use(cors());
 
 // Define a simple route
 app.get('/', (req, res) => {
+    console.log(req);
     res.status(200).json({
-        message:process.env.NAME
+        message:`${process.env.PORT} : ${req.protocol}:  ${req.get('host') }:/`
     });
 });
 
